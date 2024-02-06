@@ -22,7 +22,7 @@ variable "prefix_override" {
 
 variable "vpc_id" {
   type        = string
-  description = "The ID of VPC to deploy the EKS cluster to"
+  description = "The ID of VPC to deploy the ECS cluster to"
 }
 
 variable "nuon_id" {

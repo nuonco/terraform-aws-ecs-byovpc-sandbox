@@ -7,8 +7,6 @@ output "runner" {
 }
 
 output "ecs_cluster" {
-  // NOTE: these are declared here -
-  // https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest?tab=outputs
   value = {
     arn  = module.ecs_cluster.cluster_arn,
     id   = module.ecs_cluster.cluster_id,
