@@ -1,8 +1,8 @@
 locals {
   vpc_id                    = var.vpc_id
-  subnets_private_tag_key   = "kubernetes.io/role/internal-elb"
+  subnets_private_tag_key   = "visibility:private"
   subnets_private_tag_value = "1"
-  subnets_public_tag_key    = "kubernetes.io/role/elb"
+  subnets_public_tag_key    = "visibility:public"
   subnets_public_tag_value  = "1"
 }
 
