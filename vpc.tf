@@ -1,9 +1,9 @@
 locals {
   vpc_id                    = var.vpc_id
-  subnets_private_tag_key   = "visibility:private"
-  subnets_private_tag_value = "1"
-  subnets_public_tag_key    = "visibility:public"
-  subnets_public_tag_value  = "1"
+  subnets_private_tag_key   = "visibility"
+  subnets_private_tag_value = "private"
+  subnets_public_tag_key    = "visibility"
+  subnets_public_tag_value  = "public"
 }
 
 
