@@ -11,7 +11,7 @@ output "ecs_cluster" {
   value = {
     arn  = module.ecs_cluster.cluster_arn,
     id   = module.ecs_cluster.cluster_id,
-    name = module.ecs_cluster.name,
+    name = module.ecs_cluster.cluster_name,
   }
   description = "A map of ecs_cluster attributes: arn, id, name."
 }
