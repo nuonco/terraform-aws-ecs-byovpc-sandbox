@@ -26,10 +26,10 @@ output "vpc" {
     azs  = data.aws_availability_zones.available.zone_ids
 
     private_subnet_cidr_blocks = [for s in data.aws_subnet.private : s.cidr_block]
-    private_subnet_ids         = data.aws_subnets.private.ids
+    private_subnet_ids         = local.private_subnet_ids
 
     public_subnet_cidr_blocks = [for s in data.aws_subnet.public : s.cidr_block]
-    public_subnet_ids         = data.aws_subnets.public.ids
+    public_subnet_ids         = local.public_subnet_ids
 
     default_security_group_id  = aws_security_group.runner.id
     default_security_group_arn = aws_security_group.runner.arn

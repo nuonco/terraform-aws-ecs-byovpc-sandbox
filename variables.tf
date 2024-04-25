@@ -54,3 +54,15 @@ variable "nuon_runner_install_trust_iam_role_arn" {
   type        = string
   description = "The ARN of the AWS IAM Role to grant Nuon access to install the ECS Fargate runner. Will be set by Nuon during the install provision process."
 }
+
+variable "private_subnet_ids" {
+  type        = string
+  default     = ""
+  description = "Comma-separated string of IDs of the subnets to create private resources in."
+}
+
+variable "public_subnet_ids" {
+  type        = string
+  default     = ""
+  description = "Comma-separated string of IDs of the subnets to create public resources in."
+}
