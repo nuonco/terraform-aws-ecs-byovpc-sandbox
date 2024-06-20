@@ -18,15 +18,15 @@ variable "vpc_id" {
 }
 
 variable "subnet_ids" {
-  type = string
+  type        = string
   description = "Comma separated list of subnet-ids to install the subnet in."
-  default = ""
+  default     = ""
 }
 
 variable "subnet_tag" {
-  type = string
+  type        = string
   description = "key:value subnet tag to lookup subnets to install by"
-  default = ""
+  default     = ""
 }
 
 # These will be set by Nuon during the install provision process.
