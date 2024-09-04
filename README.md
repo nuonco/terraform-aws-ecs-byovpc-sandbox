@@ -4,7 +4,9 @@ AWS ECS BYOVPC sandbox for Nuon apps.
 
 ## Usage
 
-This module can be used via the [aws-ecs-byovpc](github.com/nuonco/sandboxes/aws-ecs-byovpc) project in [nuonco/sandboxes](github.com/nuonco/sandboxes).
+This module can be used via the
+[aws-ecs-byovpc](https://github.com/nuonco/sandboxes/tree/main/aws-ecs-byovpc)
+project in [nuonco/sandboxes](https://github.com/nuonco/sandboxes).
 
 ```hcl
 resource "nuon_app" "my_byovpc_app" {
