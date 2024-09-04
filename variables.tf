@@ -17,16 +17,23 @@ variable "vpc_id" {
   description = "The ID of the AWS VPC to provision the sandbox in."
 }
 
+variable "subnet_ids" {
+  type        = string
+  description = "Comma separated list of subnet-ids to install the subnet in."
+  default     = ""
+}
+
+variable "subnet_tag" {
+  type        = string
+  description = "key:value subnet tag to lookup subnets to install by"
+  default     = ""
+}
+
 # These will be set by Nuon during the install provision process.
 
 variable "nuon_id" {
   type        = string
   description = "An ID used to name resources. Defaults to the install ID. Will be set by Nuon during the install provision process."
-}
-
-variable "assume_role_arn" {
-  type        = string
-  description = "The ARN of the AWS IAM Role to assume during provisioning of the sandbox. Will be set by Nuon during the install provision process."
 }
 
 variable "tags" {
@@ -50,11 +57,6 @@ variable "public_root_domain" {
   description = "The public root domain of the sandbox. Will be set by Nuon during the install provision process."
 }
 
-variable "runner_install_role" {
-  type        = string
-  description = "The role that is used to install the runner, and should be granted access."
-}
-
 variable "private_subnet_ids" {
   type        = string
   default     = ""
@@ -65,4 +67,9 @@ variable "public_subnet_ids" {
   type        = string
   default     = ""
   description = "Comma-separated string of IDs of the subnets to create public resources in."
+}
+
+variable "runner_install_role" {
+  type        = string
+  description = "The role that is used to install the runner, and should be granted access."
 }
